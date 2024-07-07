@@ -1,5 +1,5 @@
-# Strava ELT Data Pipline
-**EtLT of my own Strava data using the Strava API, MySQL, Python, S3, Redshift, and Airflow**
+# Simple Data Engineer Pipeline Project on Azure
+**In this project, I will show you how to build a simple data pipeline and do analysis on Azure.**
 
 ![system_diagram](https://github.com/jackmleitch/StravaDataPipline/blob/master/images/system_diagram.png)
 
