@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "--Count the number of athletes from each country\nSELECT Country, COUNT(*) as TotalAthletes\nFROM athletes\nGROUP BY Country\nORDER BY TotalAthletes ASC;\n\n--Calculate the total medals won by each country\n\nSELECT Team_Country, SUM(Gold) AS Gold_Win, SUM(Silver) AS Silver_Win, SUM(Bronze) AS Bronze_Win\nFROM Medals\nGROUP BY Team_Country;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "tokyool_dbmpic",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
