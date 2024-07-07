@@ -3,7 +3,7 @@
 	"location": "eastasia",
 	"identity": {
 		"type": "SystemAssigned",
-		"principalId": "",
-		"tenantId": ""
+		"principalId": "8037fc87-f700-4da6-a779-6edebde1e998",
+		"tenantId": "f8e3498d-d062-493b-aa0a-bf30a095e647"
 	}
 }
