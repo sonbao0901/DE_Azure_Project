@@ -1,9 +1,9 @@
 # Simple Data Engineer Pipeline Project on Azure
 **In this project, I will show you how to build a simple data pipeline and do analysis on Azure.**
 
-![system_diagram](https://github.com/jackmleitch/StravaDataPipline/blob/master/images/system_diagram.png)
+![system_diagram](https://github.com/sonbao0901/DE_Azure_Project/blob/main/images/Animation.gif)
 
-**I build an EtLT pipeline to ingest my [Strava data](https://www.strava.com/athletes/5028644) from the Strava API and load it into a [Redshift](https://aws.amazon.com/redshift/) data warehouse. This pipeline is then run once a week using [Airflow](https://airflow.apache.org) to extract any new activity data. The end goal is then to use this data warehouse to build an automatically updating dashboard in Tableau and also to trigger automatic re-training of my [Strava Kudos Prediction model](https://github.com/jackmleitch/StravaKudos).**
+**I built an EtLT pipeline to ingest [Tokyo Olympic Data](https://github.com/sonbao0901/DE_Azure_Project/tree/main/data) from Github and loaded it into a ***Data Lake Gen 2***. After that, I use ***DataBricks*** to do some transformation for analytics purposes and then uploaded transformed data into ***Data Lake Gen 2***. Finally, I used ***Synapse Analytics*** to explore data.**
 
 <!--truncate-->
 
