@@ -3,7 +3,7 @@
 
 ![system_diagram](https://github.com/sonbao0901/DE_Azure_Project/blob/main/images/Animation.gif)
 
-**I built an EtLT pipeline to ingest [Tokyo Olympic Data](https://github.com/sonbao0901/DE_Azure_Project/tree/main/data) from Github and loaded it into a ***Data Lake Gen 2***. After that, I use ***DataBricks*** to do some transformation for analytics purposes and then uploaded transformed data into ***Data Lake Gen 2***. Finally, I used ***Synapse Analytics*** to explore data.**
+**I built an ETL pipeline to ingest [Tokyo Olympic Data](https://github.com/sonbao0901/DE_Azure_Project/tree/main/data) from Github and loaded it into a ***Data Lake Gen 2***. After that, I use ***DataBricks*** to do some transformation for analytics purposes and then uploaded transformed data into ***Data Lake Gen 2***. Finally, I used ***Synapse Analytics*** to explore data.**
 
 <!--truncate-->
 
