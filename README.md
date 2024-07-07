@@ -10,6 +10,7 @@
 ## Azure Configurations
 
 The first thing I did was config Azure and all the applications above. We would need a *resource* to manage all your application resources. You can view all subcribed applications and their own set of resources, billing, and access management policies in *subcription*.
+
 ![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/24b3adb7-5bc5-4525-a1de-52c77632047a)
 
 After creating the resource, I would go into each application and started creating its own need resources.
