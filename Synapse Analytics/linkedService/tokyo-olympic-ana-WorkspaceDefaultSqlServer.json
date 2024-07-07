@@ -3,7 +3,7 @@
 	"type": "Microsoft.Synapse/workspaces/linkedservices",
 	"properties": {
 		"typeProperties": {
-			"connectionString": "Data Source=tcp:tokyo-olympic-ana.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+			"connectionString": ""
 		},
 		"parameters": {
 			"DBName": {
