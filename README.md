@@ -27,13 +27,13 @@ Creating a resource for Storage Account based on initial subscription and creati
 
 ![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/e5c6f885-c812-424d-bd8c-7467bbc5645b)
 
-### Data Factory
+### [Data Factory](https://github.com/sonbao0901/DE_Azure_Project/tree/main/ADF)
 
 Same as Storage Account, I also created a resource for Data Factory using the same resource groups so that data from each service/application can communicateto each other seamlessly and simplifies management tasks. After creating data factory resource, I went into its portal. Then, I created a pipeline to ingest data from Github csv file into Storage Account.
 
 ![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/1c8cf176-dc37-46f7-82d0-99307d68f6b7)
 
-### DataBricks
+### [DataBricks](https://github.com/sonbao0901/DE_Azure_Project/tree/main/DataBricks)
 
 Also using same a resource groups as 2 previous services/applications. To run code on DataBricks, I created a compute cluster to run Spark. The code below is an example code for data transformation using PySpark. After finishing transformations, I save all the files into Storage Account transform data folder.
 
@@ -133,7 +133,7 @@ medals = medals.write.mode('overwrite').option("header", 'true').csv("/mnt/tokyo
 teams = teams.write.mode('overwrite').option("header", 'true').csv("/mnt/tokyoolympic/transformed-data/Teams")
 ```
 
-### Synapse Analytics
+### [Synapse Analytics](https://github.com/sonbao0901/DE_Azure_Project/tree/main/Synapse%20Analytics)
 
 Using the same resource group as other applications. In this service, I ingested transformed data from Data Lake Gen 2 (ADLS gen 2). Then, I started writing SQL script for analysis purposes. The SQL scripts below is a example for SQL analysis:
 
