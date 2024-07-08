@@ -44,9 +44,9 @@ from pyspark.sql.types import IntegerType, DoubleType, BooleanType, DateType
 
 configs = {"fs.azure.account.auth.type": "OAuth",
 "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
-"fs.azure.account.oauth2.client.id": "73095a70-cebd-46d2-8769-b08db18b31b1",
-"fs.azure.account.oauth2.client.secret": '9MC8Q~MwZ734hn~wAxUOW_.kHGu6iD1k4_IAYbqK',
-"fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/f8e3498d-d062-493b-aa0a-bf30a095e647/oauth2/token"}
+"fs.azure.account.oauth2.client.id": "{client_Key}",
+"fs.azure.account.oauth2.client.secret": '{secret_key}',    #can get secret key by creating an app using app registrations and then create a secret key to help databrick communication with data lake storage gen 2
+"fs.azure.account.oauth2.client.endpoint": "https://login.microsoftonline.com/{tenant_id}/oauth2/token"}
 
 dbutils.fs.mount(
 source = "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/",
