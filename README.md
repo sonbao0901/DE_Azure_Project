@@ -15,7 +15,7 @@ To use Azure Serives, you need a *subcription* to give a way to logically group 
 
 ![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/603fe11d-13b7-4f42-920d-08df00f3d954)
 
-After creating the resource, I would go into each application and started creating its own need resources. Here is all resources that I created:
+After creating the subscription, I would go into each application and started creating its own need resources. Here is all resources that I created:
 
 ![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/1b64f726-c32e-44a6-b187-bbaf481d6cdb)
 
