@@ -1,8 +1,8 @@
 {
-	"name": "SQL script 1",
+	"name": "SQL script",
 	"properties": {
 		"content": {
-			"query": "--Count the number of athletes from each country\nSELECT Country, COUNT(*) as TotalAthletes\nFROM athletes\nGROUP BY Country\nORDER BY TotalAthletes ASC;\n\n--Calculate the total medals won by each country\n\nSELECT Team_Country, SUM(Gold) AS Gold_Win, SUM(Silver) AS Silver_Win, SUM(Bronze) AS Bronze_Win\nFROM Medals\nGROUP BY Team_Country;",
+			"query": "--Count the number of athletes from each country\nSELECT \n        Country, \n        COUNT(*) as TotalAthletes\nFROM \n        athletes\nGROUP BY \n        Country\nORDER BY \n        TotalAthletes ASC;\n\n\n\n--Calculate the total medals won by each country\nSELECT \n        Team_Country,\n        SUM(Gold) AS Gold_Win, \n        SUM(Silver) AS Silver_Win, \n        SUM(Bronze) AS Bronze_Win\nFROM \n        Medals\nGROUP BY \n        Team_Country\nORDER BY \n        2 DESC, \n        3 DESC, \n        4 DESC;\n\nSELECT \n        *\nFROM\n        Entries_Gender;\n",
 			"metadata": {
 				"language": "sql"
 			},
