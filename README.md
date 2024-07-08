@@ -13,21 +13,29 @@
 
 To use Azure Serives, you need a *subcription* to give a way to logically group and manage Azure resources.
 
-![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/24b3adb7-5bc5-4525-a1de-52c77632047a)
+![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/603fe11d-13b7-4f42-920d-08df00f3d954)
 
 After creating the resource, I would go into each application and started creating its own need resources.
 
 ### Storage Account
 
-Creating a resource for Storage Account based on initial subscription and creating a resource groups for later uses with other services/applications (data factory, synapse, databricks). Also, creating 2 folders to store raw data and transformed data.
+Creating a resource for Storage Account based on initial subscription and creating a resource groups for later uses with other services/applications (data factory, synapse, databricks). In the container, creating a container to store data. Inside created container, I created 2 folders for raw data and transformed data.
+
+![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/55b705ef-a3ed-4712-ae76-16575c03f012)
+
+![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/e5c6f885-c812-424d-bd8c-7467bbc5645b)
 
 ### Data Factory
 
-Same as Storage Account, I also created a resource for Data Factory using the same resource groups so that data from each service/application can communicateto each other seamlessly and simplifies management tasks. Creating a pipeline to ingest data from Github into Storage Account.
+Same as Storage Account, I also created a resource for Data Factory using the same resource groups so that data from each service/application can communicateto each other seamlessly and simplifies management tasks. After creating data factory resource, I went into its portal. Then, I created a pipeline to ingest data from Github csv file into Storage Account.
+
+![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/1c8cf176-dc37-46f7-82d0-99307d68f6b7)
 
 ### DataBricks
 
 Also using same a resource groups as 2 previous services/applications. To run code on DataBricks, I created a compute cluster to run Spark. The code below is an example code for data transformation using PySpark. After finishing transformations, I save all the files into Storage Account transform data folder.
+
+![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/e88bd242-782f-44d8-a00c-af9b71b9044b)
 
 ```python
 # Databricks notebook source
@@ -126,6 +134,8 @@ teams = teams.write.mode('overwrite').option("header", 'true').csv("/mnt/tokyool
 ### Synapse Analytics
 
 Using the same resource group as other applications. In this service, I ingested transformed data from Data Lake Gen 2 (ADLS gen 2). Then, I started writing SQL script for analysis purposes. The SQL scripts below is a example for SQL analysis:
+
+![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/85182626-c5b9-4026-bc4d-5266871dcff9)
 
 ```sql
 --Count the number of athletes from each country
