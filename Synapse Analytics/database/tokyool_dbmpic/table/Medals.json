@@ -87,11 +87,11 @@
 					"DeltaFormatInvalidMessages": []
 				},
 				{
-					"Name": "Rank by Total",
+					"Name": "Rank_by_Total",
 					"OriginDataTypeName": {
 						"TypeName": "long",
-						"IsComplexType": false,
 						"IsNullable": true,
+						"IsComplexType": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -124,7 +124,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
