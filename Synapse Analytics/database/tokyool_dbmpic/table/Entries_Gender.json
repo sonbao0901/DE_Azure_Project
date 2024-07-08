@@ -1,7 +1,7 @@
 {
-	"name": "Athletes",
+	"name": "Entries_Gender",
 	"properties": {
-		"Name": "Athletes",
+		"Name": "Entries_Gender",
 		"EntityType": "TABLE",
 		"Namespace": {
 			"DatabaseName": "tokyool_dbmpic"
@@ -14,32 +14,6 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
-					"Name": "PersonName",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					},
-					"DeltaFormatInvalidMessages": []
-				},
-				{
-					"Name": "Country",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					},
-					"DeltaFormatInvalidMessages": []
-				},
-				{
 					"Name": "Discipline",
 					"OriginDataTypeName": {
 						"TypeName": "string",
@@ -51,6 +25,42 @@
 						}
 					},
 					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "Female",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "Male",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "Total",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
 				}
 			],
 			"Format": {
@@ -59,7 +69,7 @@
 				"FormatType": "csv",
 				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
 				"Properties": {
-					"path": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Athletes/part-00000-tid-8449434239684933465-f1df8240-b852-418c-9a29-cd4e234289b4-16-1-c000.csv",
+					"path": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Entries_Gender/part-00000-tid-5520084073850334319-c5ace64d-bee9-4ecc-b06c-3777aef1b231-18-1-c000.csv",
 					"delimiter": ",",
 					"multiLine": "false",
 					"firstRowAsHeader": "true",
@@ -70,7 +80,7 @@
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Athletes/part-00000-tid-8449434239684933465-f1df8240-b852-418c-9a29-cd4e234289b4-16-1-c000.csv",
+				"Location": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Entries_Gender/part-00000-tid-5520084073850334319-c5ace64d-bee9-4ecc-b06c-3777aef1b231-18-1-c000.csv",
 				"Properties": {
 					"LinkedServiceName": "tokyo-olympic-ana-WorkspaceDefaultStorage",
 					"LocationSetToDatabaseDefault": false
@@ -78,7 +88,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"compression": "",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,

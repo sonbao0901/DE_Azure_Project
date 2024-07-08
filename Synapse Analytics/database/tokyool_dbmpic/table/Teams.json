@@ -1,7 +1,7 @@
 {
-	"name": "Athletes",
+	"name": "Teams",
 	"properties": {
-		"Name": "Athletes",
+		"Name": "Teams",
 		"EntityType": "TABLE",
 		"Namespace": {
 			"DatabaseName": "tokyool_dbmpic"
@@ -14,7 +14,20 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
-					"Name": "PersonName",
+					"Name": "TeamName",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "Discipline",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -40,7 +53,7 @@
 					"DeltaFormatInvalidMessages": []
 				},
 				{
-					"Name": "Discipline",
+					"Name": "Event",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -59,7 +72,7 @@
 				"FormatType": "csv",
 				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
 				"Properties": {
-					"path": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Athletes/part-00000-tid-8449434239684933465-f1df8240-b852-418c-9a29-cd4e234289b4-16-1-c000.csv",
+					"path": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Teams/part-00000-tid-5224509546257316270-b9e4b73f-4678-419d-bf2e-9354dbf0b417-20-1-c000.csv",
 					"delimiter": ",",
 					"multiLine": "false",
 					"firstRowAsHeader": "true",
@@ -70,7 +83,7 @@
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Athletes/part-00000-tid-8449434239684933465-f1df8240-b852-418c-9a29-cd4e234289b4-16-1-c000.csv",
+				"Location": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/transformed-data/Teams/part-00000-tid-5224509546257316270-b9e4b73f-4678-419d-bf2e-9354dbf0b417-20-1-c000.csv",
 				"Properties": {
 					"LinkedServiceName": "tokyo-olympic-ana-WorkspaceDefaultStorage",
 					"LocationSetToDatabaseDefault": false
@@ -78,7 +91,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"compression": "",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
