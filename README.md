@@ -1,4 +1,4 @@
-# Simple Data Engineer Pipeline Project on Azure
+# Simple Data Engineer Project about building pipeline on Azure
 **In this project, I will show you how to build a simple data pipeline and do analysis on Azure.**
 
 ![system_diagram](https://github.com/sonbao0901/DE_Azure_Project/blob/main/images/Animation.gif)
