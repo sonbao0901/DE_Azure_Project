@@ -3,7 +3,7 @@
 	"type": "Microsoft.Synapse/workspaces/linkedservices",
 	"properties": {
 		"typeProperties": {
-			"url": "https://deprojectsonbao.dfs.core.windows.net"
+			"url": ""
 		},
 		"type": "AzureBlobFS",
 		"connectVia": {
