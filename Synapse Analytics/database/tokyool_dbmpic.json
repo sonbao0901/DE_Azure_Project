@@ -11,15 +11,15 @@
 		},
 		"Source": {
 			"Provider": "ADLS",
-			"Location": "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/tokyool_dbmpic",
+			"Location": "",
 			"Properties": {
 				"FormatType": "csv",
-				"LinkedServiceName": "tokyo-olympic-ana-WorkspaceDefaultStorage"
+				"LinkedServiceName": ""
 			}
 		},
 		"PublishStatus": "PUBLISHED",
 		"ObjectVersion": 7,
-		"ObjectId": "7158c2c1-477b-4187-8550-9c6f2b15dc5a"
+		"ObjectId": ""
 	},
 	"type": "DATABASE"
 }
