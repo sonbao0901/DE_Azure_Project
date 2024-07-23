@@ -40,17 +40,8 @@ Also using same a resource groups as 2 previous services/applications. To run co
 ![image](https://github.com/sonbao0901/DE_Azure_Project/assets/104372010/e88bd242-782f-44d8-a00c-af9b71b9044b)
 
 ```python
-# Databricks notebook source
-# MAGIC %md
-# MAGIC #Configuration
-
-# COMMAND ----------
-
 from pyspark.sql.functions import *
 from pyspark.sql.types import IntegerType, DoubleType, BooleanType, DateType
-
-
-# COMMAND ----------
 
 configs = {"fs.azure.account.auth.type": "OAuth",
 "fs.azure.account.oauth.provider.type": "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
@@ -63,35 +54,13 @@ source = "abfss://de-project-data@deprojectsonbao.dfs.core.windows.net/",
 mount_point = "/mnt/tokyoolympic",
 extra_configs = configs)
 
-# COMMAND ----------
-
-# MAGIC %fs
-# MAGIC ls /mnt/tokyoolympic
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC #Import Data
-
-# COMMAND ----------
-
 athletes = spark.read.format('csv').option('header', 'true').load('/mnt/tokyoolympic/raw-data/Athletes.csv')
 coaches = spark.read.format('csv').option('header', 'true').load('/mnt/tokyoolympic/raw-data/Coaches.csv')
 gender = spark.read.format("csv").option("header","true").load("/mnt/tokyoolympic/raw-data/EntriesGender.csv")
 medals = spark.read.format("csv").option("header","true").load("/mnt/tokyoolympic/raw-data/Medals.csv")
 teams = spark.read.format("csv").option("header","true").load("/mnt/tokyoolympic/raw-data/Teams.csv")
 
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC #Transformation
-
-# COMMAND ----------
-
 athletes.show(), coaches.show(), gender.show(), medals.show(), teams.show()
-
-
-# COMMAND ----------
 
 print('Schema Athletes: ') 
 athletes.printSchema()
@@ -104,9 +73,6 @@ medals.printSchema()
 print('Schema Teams: ')
 teams.printSchema()
 
-
-# COMMAND ----------
-
 gender = gender.withColumn("Female", col("Female").cast(IntegerType()))\
     .withColumn("Male", col("Male").cast(IntegerType()))\
         .withColumn("Total", col("Total").cast(IntegerType()))
@@ -118,13 +84,6 @@ medals = medals.withColumn("Rank", col("Rank").cast(IntegerType()))\
         .withColumn("Bronze", col("Bronze").cast(IntegerType()))\
             .withColumn("Total", col("Total").cast(IntegerType()))\
                 .withColumn("Rank by Total", col("Rank by Total").cast(IntegerType()))
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC #Exporting Data
-
-# COMMAND ----------
 
 athletes = athletes.write.mode('overwrite').option("header", 'true').csv("/mnt/tokyoolympic/transformed-data/Athletes")
 coaches = coaches.write.mode('overwrite').option("header", 'true').csv("/mnt/tokyoolympic/transformed-data/Coaches")
